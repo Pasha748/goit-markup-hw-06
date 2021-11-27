@@ -67,6 +67,9 @@ body {
   bottom: -1px;
   left: 0;
 }
+:focus {
+  outline: 0;
+}
 
 /* --------------Header-------------- */
 
@@ -432,13 +435,8 @@ body {
 }
 
 .clients-item {
-  border: 1px solid var(--svg-color);
-  border-radius: 4px;
   width: 170px;
   height: 92px;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item + .clients-item {
   margin-left: 30px;
@@ -446,6 +444,7 @@ body {
 
 .clients-link {
   fill: var(--svg-color);
+  border: 1px solid var(--svg-color);
   width: 100%;
   height: 100%;
   background-color: var(--main-background-color);
@@ -453,18 +452,14 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  transition-property: fill;
+  transition-property: fill border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
   fill: var(--accent-color);
-}
-.clients-item:hover,
-.clients-item:focus {
-  fill: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* --------------Footer-------------- */
@@ -605,7 +600,8 @@ body {
 .foot-cont {
   display: flex;
 }
-.input {
+
+.footer-subscribe-input {
   width: 358px;
   height: 50px;
   background-color: #2f303a;
@@ -613,6 +609,9 @@ body {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+.footer-subscribe-input:focus {
+  outline: 0;
 }
 
 /* --------------Backdrop-------------- */
@@ -754,7 +753,11 @@ body {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.port-products-item:hover .port-products-window {
+.port-products-link {
+  display: block;
+}
+.port-products-link:hover .port-products-window,
+.port-products-link:focus .port-products-window {
   left: 0;
   top: 0;
   width: 370px;
@@ -776,7 +779,8 @@ body {
 .products-container {
   border: 1px solid #eeeeee;
 }
-.port-products-item:hover {
+.port-products-link:hover,
+.port-products-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
