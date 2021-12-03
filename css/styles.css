@@ -692,6 +692,13 @@ body {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  transition-property: fill;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent-color);
 }
 .modal-title {
   display: block;
@@ -757,7 +764,6 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
   color: rgba(117, 117, 117, 0.5);
 }
 .label-title {
@@ -768,7 +774,24 @@ body {
   color: #757575;
   margin-bottom: 4px;
 }
-
+.modal-btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: var(--second-btn-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: block;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  padding: 10px 28px 10px 29px;
+  border-radius: 5px;
+  border: none;
+  margin: 40px auto;
+  text-align: center;
+}
 /* --------------Portfolio-------------- */
 
 .filter-section {
