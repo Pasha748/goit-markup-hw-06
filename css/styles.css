@@ -756,6 +756,8 @@ body {
   transition-property: border;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+  resize: none;
 }
 .online-text:focus {
   border: 1px solid var(--accent-color);
@@ -774,6 +776,12 @@ body {
   color: #757575;
   margin-bottom: 4px;
 }
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
 .modal-btn {
   width: 200px;
   height: 50px;
@@ -789,8 +797,16 @@ body {
   padding: 10px 28px 10px 29px;
   border-radius: 5px;
   border: none;
-  margin: 40px auto;
+  margin: auto;
   text-align: center;
+  transition-property: box-shadow;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* --------------Portfolio-------------- */
 
