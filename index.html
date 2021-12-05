@@ -476,7 +476,7 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
-            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <p2 class="modal-title">Оставьте свои данные, мы вам перезвоним</p2>
 
             <form action="#" class="modal-form">
                 <div class="modal-field">
@@ -516,14 +516,22 @@
                     </label>
                     <textarea name="online-text" id="online-text" class="online-text" cols="30" rows="10"
                         placeholder="Введите текст">
-                    </textarea>
+                </textarea>
                 </div>
-                <div class="modal-field">
-                    <input type="checkbox" name="policy" id="policy" class="modal-check">
-                    <label for="policy" class="check-text">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                <div class="modal-policy">
+                    <input type="checkbox" name="policy" id="policy" class="modal-check visually-hidden">
+                    <label for="policy" class="check-text"><span class="check-item">
+                            <svg class="check-icon" width="11" height="8">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span> Соглашаюсь с рассылкой и
+                        принимаю <span class="policy-item">
+                            <a href="#" class="policy-link link "> Условия договора</a>
+                        </span></label>
                 </div>
                 <button type="submit" class="button modal-btn">Отправить</button>
             </form>
+
 
         </div>
     </div>
